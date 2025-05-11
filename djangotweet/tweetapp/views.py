@@ -9,5 +9,8 @@ def listtweet(request):
     return render(request, 'tweetapp/listtweet.html',context=tweet_dict)
 
 def addtweet(request):
+    if request.POST:
+        print(request.POST["nickname"])
+        print(request.POST["message"])
     return render(request, 'tweetapp/addtweet.html')
 

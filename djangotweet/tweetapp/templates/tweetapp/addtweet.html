@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Add Tweet Page</h1>
+<form action="" method="POST">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="nickname" class="form-label">Nickname</label>
+      <input type="text" class="form-control" name="nickname" id="nickname">
+    </div>
+    <div class="mb-3">
+      <label for="massage" class="form-label">Message</label>
+      <input type="text" class="form-control" name="message" id="massage">
+    </div>
+    <button type="submit" class="btn btn-primary">Send Tweet</button>
+  </form>
 {% endblock %}
