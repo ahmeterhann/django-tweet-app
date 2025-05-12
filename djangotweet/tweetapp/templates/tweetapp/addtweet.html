@@ -3,6 +3,7 @@
 {% block content %}
 <form action="" method="POST">
     {% csrf_token %}
+    <div class="container" style="width: 50%;">
     <div class="mb-3">
       <label for="nickname" class="form-label">Nickname</label>
       <input type="text" class="form-control" name="nickname" id="nickname">
@@ -12,5 +13,6 @@
       <input type="text" class="form-control" name="message" id="massage">
     </div>
     <button type="submit" class="btn btn-primary">Send Tweet</button>
+  </div>
   </form>
 {% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container tweetform">
+<form action="" method="POST">
+    {% csrf_token %}
+   
+   <br>
+    {%for field in form%}
+    <div class="form-control">
+        {{field.label_tag}}
+        {{field}}
+    </div>
+    
+    {%endfor%}
+    
+   <button type="submit" class="btn btn-primary">Send Tweet</button>
+  </form>
+  </div>
+{% endblock %}

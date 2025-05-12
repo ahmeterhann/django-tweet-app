@@ -1,9 +1,17 @@
 {% extends "base.html" %}
 
 {% block content %}
-<ul>
+
+    <div class="container" style="width: 50% ;">
     {%for tweet in tweets%}
-        <li>{{tweet}}</li>
+        <div class="card" style="padding:5px;">
+            <div class="card-header" style="background-color: cornflowerblue;">
+                <h4>{{tweet.nickname}}</h4>
+            </div>
+            <div class="card-body">
+                <p class="card-text">{{tweet.message}}</p>
+            </div>
+        </div>
     {%endfor%}
-</ul>
+    </div>
 {% endblock %}
