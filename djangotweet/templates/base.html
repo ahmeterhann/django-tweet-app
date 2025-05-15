@@ -28,7 +28,18 @@
                     <li class="nav-item"> <a class="nav-link" href="{% url 'tweetapp:addtweetbyform' %}">Add Tweet By Form</a> </li>
                     <li class="nav-item"> <a class="nav-link" href="{% url 'tweetapp:addtweetbymodelform' %}">Add Tweet By Model Form</a> </li> 
                     -->
+                    <li class="nav-item"> <a class="nav-link" href="{% url 'login' %}">Login</a> </li>
 
+                    <!-- ben GET isteğiyle logout yapamadım. -->
+                    <!-- <li class="nav-item"> <a class="nav-link" href="{% url 'logout' %}?next=/">Logout</a> </li> -->
+
+                    <li class="nav-item">
+                        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-link nav-link" style="padding:0; border:none; background:none; vertical-align: middle;">Logot</button>
+                        </form>
+                    </li>
+                     <li class="nav-item"> <a class="nav-link" href="{% url 'tweetapp:signup' %}">SignUp</a> </li>
                 </ul>
             </div>
         </div>
